@@ -59,14 +59,11 @@ contract DecentralizedStableCoin is ERC20Burnable, Ownable {
         super.burn(_amount);
     }
 
-///@dev allows for minting new DSC tokens 
-/// @param _to: address to mint DSC tokens to. 
-/// @param _amount: amount of DSC tokens to mint
-/// @return bool: true if mint was successful. false if otherwise. 
-    function mint(
-        address _to,
-        uint256 _amount
-    ) external onlyOwner returns (bool) {
+    ///@dev allows for minting new DSC tokens
+    /// @param _to: address to mint DSC tokens to.
+    /// @param _amount: amount of DSC tokens to mint
+    /// @return bool: true if mint was successful. false if otherwise.
+    function mint(address _to, uint256 _amount) external onlyOwner returns (bool) {
         if (_to == address(0)) {
             revert DecentralizedStableCoin__NotZeroAddress();
         }
