@@ -4,5 +4,12 @@ out = "out"
 libs = ["lib"]
 remappings = ["@openzepplin=lib/openzepplin-contracts/", "@chainlink/contracts=lib/chainlink-brownie-contracts/contracts/"]
 
+[invariant]
+runs = 128
+depth = 128 
+fail_on_revert = true 
+# Can quickly write open testing functions with `fail_on_revert = false` 
+# `fail_on_revert = true`  - calls the function in random way that we didn't specify that might break our business logic. 
 
+# handler-based test with fail_on_revert might not be perfect. 
 # See more config options https://github.com/foundry-rs/foundry/tree/master/config
