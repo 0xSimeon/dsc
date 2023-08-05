@@ -5,3 +5,5 @@
 3. Collateral: Exogenous (Wrapped Crypto)
     - wBTC
     - wETH
+1. Understand invariants: Statements that should always hold true. 
+2. Write invariant functions. 
